@@ -37,3 +37,5 @@ exports.default = () => {
     gulp.watch('./src/scripts/*.js', { ignoreInitial: false }, gulp.series(jsCompress));
     gulp.watch('./src/assets/medias/*', { ignoreInitial: false }, gulp.series(imgCompress));
 }
+
+exports.build = gulp.series(copyHTML, sassCompiler, jsCompress, imgCompress);

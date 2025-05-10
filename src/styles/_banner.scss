@@ -1,0 +1,53 @@
+@use 'vars';
+
+.banner {
+    position: fixed;
+    width: 45vw;
+    height: 100dvh;
+    right: 0;
+    top: 0;
+    background-color: rgb(249, 164, 116, 30%);
+
+    @media (max-width: 1023px) {
+        position: static;
+        width: 100vw;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+
+        &__img {
+            max-width: 200px;
+        }
+
+        &__title {
+            color: vars.$color-text-primary;
+            font-size: 40px;
+            font-weight: 600;
+            margin: 8px 0;
+
+            @media (max-width: 1023px) {
+                font-size: 28px;
+            }
+
+            &--highlight {
+                color: vars.$color-text-highlight;
+            }
+        }
+
+        &__subtitle {
+            color: vars.$color-text-secondary;
+            line-height: 150%;
+
+            @media (max-width: 1023px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__main-img {
+        max-width: 100%;
+    }
+}

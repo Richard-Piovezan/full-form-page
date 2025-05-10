@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fomulário de Cadastro</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <section class="main" data-aos="fade" data-aos-duration="2000">
+        <div class="container">
+            <header class="main__header">
+                <a href="" class="main__header__back-page">
+                    <i class="hgi hgi-stroke hgi-arrow-left-02" data-aos="fade-right" data-aos-duration="1500"></i>
+                    <span data-aos="fade-in" data-aos-duration="1500">Voltar</span>
+                </a>
+                <h2>Formulário de matrícula</h2>
+                <p>Preencha os dados abaixo para matricular seu filho na escola de educação infantil Estrelas do Amanhã</p>
+            </header>
+            <form class="main__form">
+                <div class="main__form__personal-infos">
+                    <h3>Informações da criança</h3>
+                    <div class="main__form__field">
+                        <label for="name">Nome completo</label>
+                        <input type="text" id="name" placeholder="Nome completo da criança">
+                    </div>
+                    <div class="main__form__field">
+                        <label for="birth-date">Data de nascimento</label>
+                        <input type="text" id="birth-date">
+                    </div>
+                    <div class="main__form__field">
+                        <label for="gender">Sexo</label>
+                        <select id="gender">
+                            <option value="male" selected>Masculino</option>
+                            <option value="female">Feminino</option>
+                        </select>
+                    </div>
+                    <div class="main__form__field">
+                        <label for="medical-infos">Informações médicas</label>
+                        <textarea id="medical-infos" placeholder="Exemplo: Alergia a glúten..."></textarea>
+                    </div>
+                </div>
+                <div class="main__form__infos-address">
+                    <h3>Endereço residencial</h3>
+                    <div class="main__form__field">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep">
+                    </div>
+                    <div class="main__form__infos-address__full-address">
+                        <div class="main__form__field">
+                            <label for="street">Rua</label>
+                            <input type="text" id="street">
+                        </div>
+                        <div class="main__form__field">
+                            <label for="number-address">Número</label>
+                            <input type="text" id="number-address">
+                        </div>
+                        <div class="main__form__field">
+                            <label for="city">Cidade</label>
+                            <input type="text" id="city">
+                        </div>
+                        <div class="main__form__field">
+                            <label for="state">Estado</label>
+                            <input type="text" id="state">
+                        </div>
+                    </div>
+                </div>
+                <div class="main__form__responsible-person">
+                    <h3>Informações do responsável</h3>
+                    <div class="main__form__field">
+                        <label for="responsible-name">Nome do responsável</label>
+                        <input type="text" id="responsible-name" placeholder="Nome completo do responsável">
+                        <span class="main__form__field__shield-info">
+                            Principal responsável legal e contato de emergência
+                        </span>
+                    </div>
+                    <div class="main__form__field">
+                        <label for="phone">Telefone</label>
+                        <input type="text" id="phone">
+                        <span class="main__form__field__error-field" id="error-phone">
+                            <i class="hgi hgi-stroke hgi-alert-circle"></i>
+                            Insira um número de telefone completo
+                        </span>
+                    </div>
+                    <div class="main__form__field">
+                        <label for="email">E-mail</label>
+                        <input type="text" id="email" placeholder="E-mail completo do responsável">
+                        <span class="main__form__field__error-field" id="error-email">
+                            <i class="hgi hgi-stroke hgi-alert-circle"></i>
+                            Insira um e-mail válido
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="banner">
+        <div class="container">
+            <div class="banner__header">
+                <img class="banner__header__img" src="./assets/media/estrelas-do-amanha.png" alt="Logo: Estrelas do Amanhã" data-aos="fade-down" data-aos-duration="1000">
+                <h1 class="banner__header__title" data-aos="zoom-in" data-aos-duration="1500">
+                    Porque cada momento de 
+                    <span class="banner__header__title--highlight">
+                        aprendizado
+                    </span>
+                    conta
+                </h1>
+                <p class="banner__header__subtitle" data-aos="fade-left" data-aos-duration="1500">
+                    Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante
+                </p>
+            </div>
+            <img class="banner__main-img" src="./assets/media/Illustration.png" alt="Desenho de uma professora ensinando seus alunos" data-aos="zoom-in-left" data-aos-duration="1500">
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

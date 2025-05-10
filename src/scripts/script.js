@@ -12,6 +12,8 @@ $(document).ready(function() {
     $('#phone').mask('(00) 0 0000-0000', {
         placeholder: "(__) _ ____-____"
     });
+
+    $('#number-address').mask('0000');
 })
 
 const form = document.querySelector('.form');

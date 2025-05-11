@@ -22,16 +22,35 @@
             <form class="main__form">
                 <div class="main__form__personal-infos">
                     <h3>Informações da criança</h3>
-                    <div class="main__form__field">
-                        <label for="name">Nome completo</label>
-                        <input type="text" id="name" placeholder="Nome completo da criança">
+                    <div class="main__form__field" title="Campo obrigatório *" title="Campo obrigatório *">
+                        <label for="name">
+                            Nome completo
+                            <span class="main__form__field-required">
+                                *
+                            </span>
+                        </label>
+                        <input type="text" id="name">
                     </div>
-                    <div class="main__form__field">
-                        <label for="birth-date">Data de nascimento</label>
+                    <div class="main__form__field" title="Campo obrigatório *">
+                        <label for="birth-date">
+                            Data de nascimento
+                            <span class="main__form__field-required">
+                                *
+                            </span>
+                        </label>
                         <input type="text" id="birth-date">
+                        <span class="main__form__field__error-field" id="error-birth">
+                            <i class="hgi hgi-stroke hgi-alert-circle"></i>
+                            Insira o ano de nascimento sem abreviações
+                        </span>
                     </div>
-                    <div class="main__form__field">
-                        <label for="gender">Sexo</label>
+                    <div class="main__form__field" title="Campo obrigatório *">
+                        <label for="gender">
+                            Sexo
+                            <span class="main__form__field-required">
+                                *
+                            </span>
+                        </label>
                         <select id="gender">
                             <option value="male" selected>Masculino</option>
                             <option value="female">Feminino</option>
@@ -41,51 +60,103 @@
                         <label for="medical-infos">Informações médicas</label>
                         <textarea id="medical-infos" placeholder="Exemplo: Alergia a glúten..."></textarea>
                     </div>
+                    <div class="main__form__field">
+                        <label for="birth-document">Certidão de nascimento</label>
+                        <label for="birth-document" class="main__form__field birth-document">
+                            <input type="file" id="birth-document">
+                            <span class="main__form__field birth-document__upload" id="picture-document">
+                                
+                            </span>
+                        </label>
+                    </div>
                 </div>
                 <div class="main__form__infos-address">
                     <h3>Endereço residencial</h3>
-                    <div class="main__form__field">
-                        <label for="cep">CEP</label>
+                    <div class="main__form__field" title="Campo obrigatório *">
+                        <label for="cep">
+                            CEP
+                            <span class="main__form__field-required">
+                                *
+                            </span>
+                        </label>
                         <input type="text" id="cep">
+                        <span class="main__form__field__error-field" id="error-cep">
+                            <i class="hgi hgi-stroke hgi-alert-circle"></i>
+                            Insira um número de cep completo
+                        </span>
                     </div>
                     <div class="main__form__infos-address__full-address">
-                        <div class="main__form__field">
-                            <label for="street">Rua</label>
+                        <div class="main__form__field" title="Campo obrigatório *">
+                            <label for="street">
+                                Rua
+                                <span class="main__form__field-required">
+                                *
+                                </span>
+                            </label>
                             <input type="text" id="street">
                         </div>
-                        <div class="main__form__field">
-                            <label for="number-address">Número</label>
+                        <div class="main__form__field" title="Campo obrigatório *">
+                            <label for="number-address">Número
+                                <span class="main__form__field-required">
+                                *
+                                </span>
+                            </label>
                             <input type="text" id="number-address">
                         </div>
-                        <div class="main__form__field">
-                            <label for="city">Cidade</label>
+                        <div class="main__form__field" title="Campo obrigatório *">
+                            <label for="city">
+                                Cidade
+                                <span class="main__form__field-required">
+                                *
+                                </span>
+                            </label>
                             <input type="text" id="city">
                         </div>
-                        <div class="main__form__field">
-                            <label for="state">Estado</label>
-                            <input type="text" id="state" maxlength="2">
+                        <div class="main__form__field" title="Campo obrigatório *">
+                            <label for="state">
+                                Estado
+                                <span class="main__form__field-required">
+                                *
+                                </span>
+                            </label>
+                            <input type="text" id="state">
                         </div>
                     </div>
                 </div>
                 <div class="main__form__responsible-person">
                     <h3>Informações do responsável</h3>
-                    <div class="main__form__field">
-                        <label for="responsible-name">Nome do responsável</label>
-                        <input type="text" id="responsible-name" placeholder="Nome completo do responsável">
+                    <div class="main__form__field" title="Campo obrigatório *">
+                        <label for="responsible-name">
+                            Nome do responsável
+                            <span class="main__form__field-required">
+                                *
+                            </span>
+                        </label>
+                        <input type="text" id="responsible-name">
                         <span class="main__form__field__shield-info">
                             Principal responsável legal e contato de emergência
                         </span>
                     </div>
-                    <div class="main__form__field">
-                        <label for="phone">Telefone</label>
+                    <div class="main__form__field" title="Campo obrigatório *">
+                        <label for="phone">
+                            Telefone
+                            <span class="main__form__field-required">
+                                *
+                            </span>
+                        </label>
                         <input type="text" id="phone">
                         <span class="main__form__field__error-field" id="error-phone">
                             <i class="hgi hgi-stroke hgi-alert-circle"></i>
                             Insira um número de telefone completo
                         </span>
                     </div>
-                    <div class="main__form__field">
-                        <label for="email">E-mail</label>
+                    <div class="main__form__field" title="Campo obrigatório *">
+                        <label for="email">
+                            E-mail
+                            <span class="main__form__field-required">
+                                *
+                            </span>
+                        </label>
                         <input type="text" id="email" placeholder="E-mail completo do responsável">
                         <span class="main__form__field__error-field" id="error-email">
                             <i class="hgi hgi-stroke hgi-alert-circle"></i>

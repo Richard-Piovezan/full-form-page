@@ -47,6 +47,74 @@
         flex-direction: column;
         margin: 24px 0;
 
+            &-required {
+                color: vars.$color-stroke-highlight;
+                font-weight: 600;
+            }
+
+            & .birth-document {
+                color: vars.$color-text-secondary;
+                font-size: 14px;
+                width: 100%;
+                height: 160px;
+                border: 1px dashed vars.$color-stroke-default;
+                border-radius: 8px;
+                margin: 4px 0 0 0;
+                transition: .25s;
+                cursor: pointer;
+
+
+                &:hover, &:focus {
+                    border-color: vars.$color-stroke-highlight;
+                }
+
+                & input#birth-document {
+                    display: none;   
+                }
+
+                &:hover .birth-document__upload {
+                        color: vars.$color-stroke-highlight;
+                    }
+
+                &__upload {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 16px;
+                    color: vars.$color-stroke-default;
+                    transition: .5s;
+                    overflow: hidden;
+
+                    & img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: cover;
+                        width: 90%;
+                    }
+
+                    & i {
+                        font-size: 48px;
+                    }
+
+                    & p {
+                        max-width: 20vw;
+                        text-align: center;
+
+                        @media (max-width: 768px) {
+                            max-width: 50vw;
+                        }
+                    }
+                }
+            }
+
+            #gender {
+                background-color: transparent;
+
+                &:focus {
+                    background-color: transparent;
+                }
+            }
+
             label {
                 color: vars.$color-text-secondary;
                 font-size: 14px;

@@ -75,13 +75,53 @@ birth.addEventListener('blur', () => {
     }
 })
 
+function enableDisableInputs(condicao) {
+    const street = document.getElementById('street');
+    const number = document.getElementById('number-address');
+    const city = document.getElementById('city');
+    const state = document.getElementById('state');
+
+    if (condicao === true) {
+        street.setAttribute('readonly', condicao);
+        number.setAttribute('readonly', condicao);
+        city.setAttribute('readonly', condicao);
+        state.setAttribute('readonly', condicao);
+
+        street.style.backgroundColor = '#E7E5E4'
+        street.style.color = '#8F8881'
+        number.style.backgroundColor = '#E7E5E4'
+        number.style.color = '#8F8881'
+        city.style.backgroundColor = '#E7E5E4'
+        city.style.color = '#8F8881'
+        state.style.backgroundColor = '#E7E5E4'
+        state.style.color = '#8F8881'
+    } else {
+        street.removeAttribute('readonly');
+        number.removeAttribute('readonly');
+        city.removeAttribute('readonly');
+        state.removeAttribute('readonly');
+
+        street.style.backgroundColor = ''
+        street.style.color = ''
+        number.style.backgroundColor = ''
+        number.style.color = ''
+        city.style.backgroundColor = ''
+        city.style.color = ''
+        state.style.backgroundColor = ''
+        state.style.color = ''
+    }
+
+}
+
 cep.addEventListener('blur', () => {
-    if (cep.value.length < 9) {
+    if (cep.value.length < 9 || cep.value === null) {
         errorCep.style.display = "flex";
         cep.style.borderColor = "#DC2626";
+        enableDisableInputs(false)
     } else {
         errorCep.style.display = "none";
         cep.style.borderColor = "";
+        enableDisableInputs(true)
     }
 })
 
